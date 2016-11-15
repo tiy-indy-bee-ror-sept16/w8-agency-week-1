@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Music extends React.Component {
+class Patches extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -9,4 +9,4 @@ class Music extends React.Component {
     }
 }
 
-export default Music
+export default Patches
