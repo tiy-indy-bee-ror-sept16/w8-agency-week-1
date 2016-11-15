@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Patches extends React.Component {
+class Items extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -9,4 +9,4 @@ class Patches extends React.Component {
     }
 }
 
-export default Patches
+export default Items
