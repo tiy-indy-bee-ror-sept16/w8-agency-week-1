@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'webpack-rails'
+gem "figaro"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
