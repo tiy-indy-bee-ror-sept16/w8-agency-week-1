@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, Link, browserHistory } from 'react-router'
 import Home from './components/Home'
-import Patches from './components/Patches'
+import Items from './components/Items'
 import Music from './components/Music'
 import Farming from './components/Farming'
 import NationalParks from './components/NationalParks'
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     ReactDOM.render(// talk with back-end about
         <Router history ={browserHistory}>
             <Route path="/" component={Home} />
-            <Route path="/patches" component={Patches}>
+            <Route path="/items" component={Items}>
                 <Route path="/music" component={Music} />
                 <Route path="/farming" component={Farming} />
                 <Route path="/nationalparks" component={NationalParks} />
