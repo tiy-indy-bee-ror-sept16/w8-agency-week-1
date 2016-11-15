@@ -9,6 +9,7 @@ import NationalParks from '../components/NationalParks'
 import Movies from '../components/Movies'
 import SearchResults from '../components/SearchResults'
 import Checkout from '../components/Checkout'
+import Login from '../components/Login'
 
 // import { sharedState, attachSharedState, detachSharedState } from 'react-helpers/dist/sharedState'
 
@@ -20,16 +21,18 @@ import Checkout from '../components/Checkout'
 // makes global var called path
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    ReactDOM.render( // talk with back-end about 
+    ReactDOM.render( // talk with back-end about
         <Router history ={browserHistory}>
-            {/* <Route path="/" component={Home} /> */}
-            <Route path={path + '/'} component={Home} />
-            <Route path={path + '/music'} component={Music} />
-            <Route path={path +  '/farming'} component={Farming} />
-            <Route path={path + '/nationalparks'} component={NationalParks} />
-            <Route path={path + '/movies'} component={Movies} />
-            <Route path={path + '/searchresults'} component={SearchResults} />
-            <Route path={path + '/checkout'} component={Checkout} />
+            <Route path="/" component={Home} />
+            <Route path="/badges" component={Badges}>
+                <Route path="/music" component={Music} />
+                <Route path="/farming" component={Farming} />
+                <Route path="/nationalparks" component={NationalParks} />
+                <Route path="/movies" component={Movies} />
+            </Route>
+            <Route path="/searchresults" component={SearchResults} />
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/login" component={Login} />
         </Router> ,
         document.querySelector('#app')
     )
