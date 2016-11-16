@@ -10,6 +10,10 @@ class Items extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.fetchAllPatches()
+    }
+
     fetchAllPatches(){
         fetch('/api/items')
         .then(response => response.json())

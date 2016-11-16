@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-image: url("./img/iron-glory-background.jpg");
+}
+
+.header {
+  height: 50vw;
+  background-size: cover;
+  background-position: center;
+}
