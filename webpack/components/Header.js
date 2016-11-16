@@ -9,7 +9,7 @@ class Header extends React.Component {
     render() {
         return <div>
             <div className="col-sm-5">
-                <img src="/img/iron-glory-logo.png" alt="Iron Glory logo" />
+                {/* <img src="/img/iron-glory-logo.png" alt="Iron Glory logo" /> */}
             </div>
             <div className="col-sm-5">
                 <div className="input-group">
@@ -19,9 +19,9 @@ class Header extends React.Component {
                 </div>
                 </div>
             </div>
-        <div className="col-sm-2 pull-right">
-        <button type="button" className="btn btn-default btn-sm center-block"><span><i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> Cart</span></button>
-        </div>
+            <div className="col-sm-2 pull-right">
+                <button type="button" className="btn btn-default btn-sm center-block"><span><i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> Cart</span></button>
+            </div>
         </div>
     }
 }
