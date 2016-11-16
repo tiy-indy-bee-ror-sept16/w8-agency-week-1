@@ -9,7 +9,12 @@ def index
   render json: @item
 end
 
+def static
+end
+
+
 def show
+  @item = Item.find_by()
 end
 
 
