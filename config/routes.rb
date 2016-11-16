@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-root 'items#index'
+root 'items#static'
 
   resources :items
   resources :category
