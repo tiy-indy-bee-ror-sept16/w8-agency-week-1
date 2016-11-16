@@ -1,5 +1,5 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :id, :product, :sku, :year, :description, :created_at, :image
+  attributes :id, :product, :sku, :year, :description, :created_at, :image, :price
 
   has_many :comments
   has_one :category

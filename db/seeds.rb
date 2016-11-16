@@ -14,7 +14,7 @@ info.each do |row|
   Item.create!(
     product: row[:product],
     sku: row[:sku],
-    price: row[:price],
+    price: row[:price].gsub(/\D+/, "").to_i * 100,
     available: row[:available].gsub(/\D+/,""),
     size: row[:available].gsub(/:\d+/,""),
     year: row[:year],
