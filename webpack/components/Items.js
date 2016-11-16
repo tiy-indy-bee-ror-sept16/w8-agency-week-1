@@ -4,24 +4,13 @@ import Item from './Item'
 class Items extends React.Component {
     constructor(props) {
         super(props)
+        this.fetchAllPatches = this.fetchAllPatches.bind(this)
         this.state = {
-          allPatches: [
-              {
-              picture: 'https://unsplash.it/600?random',
-              product: 'This is product name',
-              price: '$55.00'
-                },
-            {
-            picture: 'https://unsplash.it/600?random',
-            product: 'another product',
-            price: '$44.00'
-              }
-
-        ]
+          allPatches: []
         }
     }
     // fetchAllPatches(){
-    //     fetch(OURAPICALLGOESHERE)
+    //     fetch('http://localhost:5000/items/')
     //     .then(response => response.json())
     //     .then(response => this.setState({allPatches: response}))
     // }
