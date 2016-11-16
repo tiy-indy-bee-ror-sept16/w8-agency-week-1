@@ -10,8 +10,9 @@ class Items extends React.Component {
         }
     }
     fetchAllPatches(){
-        fetch('/items')
+        fetch('/api/items')
         .then(response => response.json())
+        // .then(response => this.setState({allPatches: response}))
         .then(response => console.log(response))
     }
     render() {
