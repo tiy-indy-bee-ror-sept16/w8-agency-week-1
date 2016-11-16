@@ -1,9 +1,9 @@
-console.log("Hello everyone!");
+// console.log("Hello everyone!");
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, Link, browserHistory } from 'react-router'
 import Home from './components/Home'
-import Badges from './components/Badges'
+import Items from './components/Items'
 import Music from './components/Music'
 import Farming from './components/Farming'
 import NationalParks from './components/NationalParks'
@@ -22,10 +22,10 @@ import Login from './components/Login'
 // makes global var called path
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    ReactDOM.render( // talk with back-end about
+    ReactDOM.render(// talk with back-end about
         <Router history ={browserHistory}>
             <Route path="/" component={Home} />
-            <Route path="/badges" component={Badges}>
+            <Route path="/items" component={Items}>
                 <Route path="/music" component={Music} />
                 <Route path="/farming" component={Farming} />
                 <Route path="/nationalparks" component={NationalParks} />
@@ -38,6 +38,3 @@ document.addEventListener('DOMContentLoaded', function(event) {
         document.querySelector('#app')
     )
 })
-
-
-renderView()
