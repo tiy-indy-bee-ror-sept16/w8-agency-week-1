@@ -18,8 +18,8 @@ class Home extends React.Component {
                 </div>
             </div>
         </div>
-        <div class="container-fluid containerMargin">
-            <div class="row borderBottom">
+        <div className="container-fluid containerMargin">
+            <div className="row borderBottom">
                 <Feature />
             </div>
         </div>
