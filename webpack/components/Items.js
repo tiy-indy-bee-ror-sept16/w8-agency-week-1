@@ -9,11 +9,11 @@ class Items extends React.Component {
           allPatches: []
         }
     }
-    // fetchAllPatches(){
-    //     fetch('http://localhost:5000/items/')
-    //     .then(response => response.json())
-    //     .then(response => this.setState({allPatches: response}))
-    // }
+    fetchAllPatches(){
+        fetch('/items')
+        .then(response => response.json())
+        .then(response => console.log(response))
+    }
     render() {
         var items = this.state.allPatches.map((data, i) => {
       return <Item data={data} key={i} />
