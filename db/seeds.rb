@@ -20,5 +20,5 @@ info.each do |row|
     year: row[:year],
     description: row[:description],
     category: Category.find_or_create_by(name: row[:category])
-    )
+    image: File.open(Rails.root + "db/iron-glory-products/" + row[:sku] + ".png", "rb")    )
 end
