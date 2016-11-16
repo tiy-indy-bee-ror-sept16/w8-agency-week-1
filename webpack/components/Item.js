@@ -41,14 +41,8 @@ class Item extends React.Component {
         <div className="col-sm-4 text-center">
           <div className="listing">
               <img src={this.props.data.image} alt='a nice photo here' className='patchPhoto img-responsive' />
-            <div className="row">
-              <div className='col-sm-6'>
-                <p className='titleText text-left'>{this.props.data.product}</p>
-              </div>
-              <div className='col-sm-6'>
-                <p className='priceText text-right'>{this.props.data.price}</p>
-              </div>
-            </div>
+              <h4 className="text-center">{this.props.data.product}</h4>
+              <h4 className="text-center textColor">{this.props.data.price}</h4>
           </div>
         </div>
 
