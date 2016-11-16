@@ -5,11 +5,16 @@ def create
 end
 
 def index
-  @item = Item.all.order("created_at DESC")
+  @item = Item.all
   render json: @item
 end
 
+def static
+end
+
+
 def show
+  @item = Item.find_by()
 end
 
 

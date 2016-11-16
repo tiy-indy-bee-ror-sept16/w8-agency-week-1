@@ -16,7 +16,7 @@ info.each do |row|
     sku: row[:sku],
     price: row[:price],
     available: row[:available].gsub(/\D+/,""),
-    size: row[:available].gsub(/\D+W+/,""),
+    size: row[:available].gsub(/:\d+/,""),
     year: row[:year],
     description: row[:description],
     category: Category.find_or_create_by(name: row[:category]),
