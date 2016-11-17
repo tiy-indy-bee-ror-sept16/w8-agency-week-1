@@ -5,14 +5,15 @@ import NationalParks from './NationalParks'
 import Movies from './Movies'
 import Home from './Home'
 import Items from './Items'
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
+import Navbar from './Navbar'
 
 class Farming extends React.Component {
     constructor(props) {
         super(props)
         this.fetchFarmingPatches = this.fetchFarmingPatches.bind(this)
         this.state = {
-          Patches: []
+          farmingPatches: []
         }
     }
 
@@ -20,20 +21,21 @@ class Farming extends React.Component {
         this.fetchFarmingPatches()
     }
 
+
     fetchFarmingPatches(){
         fetch('/api/filter?filter[category_name_eq]=Farming')
         .then(response => response.json())
-        // .then(response => this.setState({Patches: response}))
-        .then(response => console.log(response))
+        .then(response => this.setState({farmingPatches: response}))
     }
     render() {
-        var items = this.state.Patches.map((data, i) => {
+        var farmingItems = this.state.farmingPatches.map((data, i) => {
       return <Item data={data} key={i} />
         })
         return <div>
+        <Navbar/>
                 <div className="container">
                     <div className="row">
-                        {items}
+                        {farmingItems}
                     </div>
                 </div>
         </div>
