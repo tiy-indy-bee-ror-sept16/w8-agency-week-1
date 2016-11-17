@@ -48,7 +48,7 @@
  display: flex;
  font-size: 20px;
  box-shadow: 2px 2px lightgrey;
- // border-bottom: 2px solid #424242 ;
+ border-bottom: 2px solid #424242 ;
 }
 .link1{
  flex: 1;
@@ -107,7 +107,7 @@
 
 .footerEtsyLinks {
     margin-top: 15px;
-    // a {
+    /*// a {
     //     color: black
-    // }
+    // }*/
 }
