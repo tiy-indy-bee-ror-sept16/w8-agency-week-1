@@ -3,7 +3,7 @@ class CategoryController < ApplicationController
 
 
   def show
-    @category = Catagory.find_by(name: params[:name])
+    @category = Catagory.find_by(sku: params[:sku])
     render json: @category
   end
 
