@@ -1,5 +1,6 @@
 class LineItemsController < ApplicationController
 
+
   def create
     if params(:token)
       @line_item = LineItem.new(
@@ -34,4 +35,5 @@ class LineItemsController < ApplicationController
     @line_items.destroy!
     render @json "Item Removed From Cart"
   end
+
 end

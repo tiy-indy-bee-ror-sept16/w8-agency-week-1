@@ -3,9 +3,10 @@ class CategoryController < ApplicationController
 
 
   def show
-    @category = Catagory.find_by(sku: params[:sku])
+    @category = Catagory.find_by(name: params[:id])
     render json: @category
   end
+
 
   def filter
     @items = Item.all

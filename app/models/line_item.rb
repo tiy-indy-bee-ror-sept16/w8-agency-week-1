@@ -6,8 +6,5 @@ class LineItem < ApplicationRecord
    item.price * quantity
  end
 
- 
-
-
 
 end
