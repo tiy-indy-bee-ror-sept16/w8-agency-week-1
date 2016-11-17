@@ -9,6 +9,7 @@ import MusicHome from './MusicHome'
 import FarmingHome from './FarmingHome'
 import MovieHome from './MovieHome'
 import NationalParksHome from './NationalParksHome'
+import Footer from './Footer'
 
 class Home extends React.Component {
     constructor(props) {
@@ -43,6 +44,11 @@ class Home extends React.Component {
             </div>
             <div className="row borderBottom">
                 <NationalParksHome />
+            </div>
+        </div>
+        <div class="container-fluid containerMargin">
+            <div class="row">
+            <Footer />
             </div>
         </div>
         </div>
