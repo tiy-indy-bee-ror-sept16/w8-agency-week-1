@@ -24,7 +24,7 @@ class Movies extends React.Component {
 
 
     fetchMoviesPatches(){
-        fetch('/api/filter?filter[category_name_eq]=Movie')
+        fetch('/api/filter?filter[category_name_eq]=Movies')
         .then(response => response.json())
         .then(response => this.setState({MoviesPatches: response}))
     }
