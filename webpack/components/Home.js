@@ -46,8 +46,8 @@ class Home extends React.Component {
                 <NationalParksHome />
             </div>
         </div>
-        <div class="container-fluid containerMargin">
-            <div class="row">
+        <div className="container-fluid containerMargin">
+            <div className="row">
             <Footer />
             </div>
         </div>
