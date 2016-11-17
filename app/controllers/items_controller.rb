@@ -1,22 +1,20 @@
 class ItemsController < ApplicationController
 
-def create
+  def create
+  end
 
-end
+  def index
+    @item = Item.all
+    render json: @item
+  end
 
-def index
-  @item = Item.all
-  render json: @item
-end
+  def static
+  end
 
-def static
-end
-
-
-def show
-  @item = Item.find_by()
-end
-
+  def show
+    @item = Item.find_by(params[:id])
+    render json: @item
+  end
 
 
 

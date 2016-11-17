@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get '/bands' => 'items#static'
 
   scope '/api' do
-    get '/filter' => 'items#static'
     get '/filter' => 'category#filter'
     resources :items
     resources :category

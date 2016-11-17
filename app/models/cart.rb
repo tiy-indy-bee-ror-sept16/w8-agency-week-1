@@ -25,6 +25,7 @@ class Cart < ApplicationRecord
 
 
   def completed
+    self.completed = true
   end
 
 
