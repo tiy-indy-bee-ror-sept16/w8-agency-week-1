@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/movies' => 'items#static'
   get '/bands' => 'items#static'
 
+  post '/addtocart' => 'line_items#create'
+
   scope '/api' do
     get '/filter' => 'category#filter'
     resources :items
