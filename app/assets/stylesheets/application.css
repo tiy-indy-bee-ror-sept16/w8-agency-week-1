@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   box-sizing: border-box;
+ }
+
+ img {
+   width: 100%;
+ }
+
+ .header {
+   height: 34vw;
+   background-color: rgb(171, 187, 255);
+   /*background-image: url('/webpack/img/iron-glory-background.jpg');*/
+   background-size: cover;
+   background-position: center;
+ }
+
+ .headerBackgroundLogo {
+  margin-top: 170px;
+}
+
+.containerMargin {
+  margin-top: 50px;
+}
+
+.borderBottom {
+  border-bottom: 1px solid red;
+}
+
+.textColor {
+  color: #FF008F;
+}
+
+.footerEtsyLinks {
+    margin-top: 15px;
+    // a {
+    //     color: black
+    // }
+}
