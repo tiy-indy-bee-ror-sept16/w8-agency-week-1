@@ -1,17 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import Modal from 'react-modal'
+import Modal from 'react-modal'
 
-const customStyles = {
-content : {
-top                   : '50%',
-left                  : '50%',
-right                 : 'auto',
-bottom                : 'auto',
-marginRight           : '-50%',
-transform             : 'translate(-50%, -50%)'
-}
-};
+// const customStyles = {
+// content : {
+// top                   : '50%',
+// left                  : '50%',
+// right                 : 'auto',
+// bottom                : 'auto',
+// marginRight           : '-50%',
+// transform             : 'translate(-50%, -50%)'
+// }
+// };
 
 class Item extends React.Component {
     constructor(props) {
@@ -42,12 +42,13 @@ class Item extends React.Component {
     }
 
     render() {
+        var price = '$' + (this.props.data.price)/100 + '.00'
         return <div>
         <div className="col-sm-4 text-center">
           <div className="listing">
               <img src={this.props.data.image} alt='a nice photo here' className='patchPhoto img-responsive' />
               <h4 className="text-center">{this.props.data.product}</h4>
-              <h4 className="text-center textColor"> {this.props.data.price}</h4>
+              <h4 className="text-center textColor"> {price}</h4>
               <button type="button" onClick={this.addToCart} className="btn btn-primary btn-sm center-block">Add to Cart</button>
           </div>
         </div>

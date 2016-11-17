@@ -7,16 +7,18 @@ import Movies from './Movies'
 import Home from './Home'
 import { Link } from 'react-router'
 import Navbar from './Navbar'
+import Modal from 'react-modal'
+
 
 class Items extends React.Component {
     constructor(props) {
         super(props)
         this.fetchAllPatches = this.fetchAllPatches.bind(this)
-        // this.fetchFarmingPatches = this.fetchFarmingPatches.bind(this)
         this.state = {
-          Patches: []
+          Patches: [],
         }
     }
+
 
     componentDidMount() {
         this.fetchAllPatches()
@@ -36,7 +38,7 @@ class Items extends React.Component {
                 <Navbar/>
                 <div className="container">
                     <div className="row">
-                        {items}
+                        <div onClick={this.openModal}>{items}</div>
                     </div>
                 </div>
         </div>
