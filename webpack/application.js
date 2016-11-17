@@ -25,12 +25,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     ReactDOM.render(// talk with back-end about
         <Router history ={browserHistory}>
             <Route path="/" component={Home} />
-            <Route path="/items" component={Items}>
+            <Route path="/items" component={Items} />
                 <Route path="/music" component={Music} />
                 <Route path="/farming" component={Farming} />
                 <Route path="/nationalparks" component={NationalParks} />
                 <Route path="/movies" component={Movies} />
-            </Route>
             <Route path="/searchresults" component={SearchResults} />
             <Route path="/checkout" component={Checkout} />
             <Route path="/login" component={Login} />

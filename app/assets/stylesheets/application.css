@@ -22,16 +22,75 @@
    width: 100%;
  }
 
+
  .header {
    height: 34vw;
-   background-color: rgb(171, 187, 255);
-   /*background-image: url('/webpack/img/iron-glory-background.jpg');*/
+   background-image: url('/img/iron-glory-background.jpg');
    background-size: cover;
    background-position: center;
  }
 
  .headerBackgroundLogo {
   margin-top: 170px;
+}
+
+.borderHeader {
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+}
+
+.tabLinks{
+ height: 5vh;
+ background-color: #424242 ;
+ margin-top: 50px;
+ margin-bottom: 20px;
+ display: flex;
+ font-size: 20px;
+ box-shadow: 2px 2px lightgrey;
+ border-bottom: 2px solid #424242 ;
+}
+.link1{
+ flex: 1;
+ color: #ff0089 ;
+ transition: .4s ease;
+ border-bottom: 2px solid #424242 ;
+}
+.link2{
+ flex: 1;
+ color: #ff0089 ;
+ transition: .4s ease;
+ border-bottom: 2px solid #424242 ;
+}
+.link3{
+ flex: 1;
+ color: #ff0089 ;
+ transition: .4s ease;
+ border-bottom: 2px solid #424242 ;
+}
+.link4{
+ flex: 1;
+ color: #ff0089 ;
+ transition: .4s ease;
+ border-bottom: 2px solid #424242 ;
+}
+.link5{
+ flex: 1;
+ color: #ff0089 ;
+ transition: .4s ease;
+ border-bottom: 2px solid #424242 ;
+}
+.link1:hover, .link2:hover, .link3:hover, .link4:hover, .link5:hover{
+ background-color: #dedede ;
+ color: #ff0089 ;
+ border-bottom: hidden;
+
+}
+
+
+.starLogo {
+  width: 65px;
+  height: 50px;
 }
 
 .containerMargin {
@@ -48,7 +107,7 @@
 
 .footerEtsyLinks {
     margin-top: 15px;
-    // a {
+    /*// a {
     //     color: black
-    // }
+    // }*/
 }

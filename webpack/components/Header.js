@@ -9,7 +9,7 @@ class Header extends React.Component {
     render() {
         return <div>
             <div className="col-sm-5">
-                {/* <img src="/img/iron-glory-logo.png" alt="Iron Glory logo" /> */}
+                <img className="starLogo" src="/img/iron-glory-logo-star.png" alt="Iron Glory logo" />
             </div>
             <div className="col-sm-5">
                 <div className="input-group">
