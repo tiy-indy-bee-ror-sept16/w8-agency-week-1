@@ -9,8 +9,6 @@ class Navbar extends React.Component{
 
 render() {
       return <div>
-      <div className="container-fluid">
-            <div className="row">
             <div className='tabLinks text-center'>
               <Link to='/Music'>
               <button className='link1'>Music</button>
@@ -27,8 +25,6 @@ render() {
               <Link to='/Items'>
               <button className='link5'>All Patches</button>
               </Link>
-            </div>
-            </div>
             </div>
   </div>
 }}

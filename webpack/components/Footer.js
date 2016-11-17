@@ -29,7 +29,7 @@ class Footer extends React.Component {
               <h5><strong><p><a href="#">Terms</a></p></strong></h5>
             </div>
             <div className="col-sm-2 pull-right">
-              <img src={'/img/iron-glory-logo.png'} alt="" />
+              <img className="starLogo" src='/img/iron-glory-logo-star.png' alt="" />
             </div>
         </div>
     }

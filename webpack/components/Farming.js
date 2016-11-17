@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from './Item'
+import Header from './Header'
 import Music from './Music'
 import NationalParks from './NationalParks'
 import Movies from './Movies'
@@ -28,16 +29,20 @@ class Farming extends React.Component {
         .then(response => this.setState({farmingPatches: response}))
     }
     render() {
-        var farmingItems = this.state.farmingPatches.map((data, i) => {
+    var farmingItems = this.state.farmingPatches.map((data, i) => {
       return <Item data={data} key={i} />
         })
         return <div>
-        <Navbar/>
+            <div className="row borderHeader">
+                <Header />
+            </div>
+                <Navbar/>
                 <div className="container">
                     <div className="row">
                         {farmingItems}
                     </div>
                 </div>
+
         </div>
     }
 }

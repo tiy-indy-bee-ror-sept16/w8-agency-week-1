@@ -22,6 +22,7 @@ class Item extends React.Component {
         // this.state = {
         //   modalIsOpen: false,
         // }
+        this.addToCart = this.addToCart.bind(this)
     }
     // openModal() {
     //     this.setState({modalIsOpen: true});
@@ -36,6 +37,9 @@ class Item extends React.Component {
     //     this.setState({modalIsOpen: false});
     //   }
 
+    addToCart() {
+        console.log(this.props.data.id)
+    }
 
     render() {
         return <div>
@@ -43,7 +47,8 @@ class Item extends React.Component {
           <div className="listing">
               <img src={this.props.data.image} alt='a nice photo here' className='patchPhoto img-responsive' />
               <h4 className="text-center">{this.props.data.product}</h4>
-              <h4 className="text-center textColor">"$" +{this.props.data.price}</h4>
+              <h4 className="text-center textColor"> {this.props.data.price}</h4>
+              <button type="button" onClick={this.addToCart} className="btn btn-primary btn-sm center-block">Add to Cart</button>
           </div>
         </div>
 
