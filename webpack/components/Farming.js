@@ -5,28 +5,29 @@ import NationalParks from './NationalParks'
 import Movies from './Movies'
 import Home from './Home'
 import Items from './Items'
+import { Link } from 'react-router'
 
 class Farming extends React.Component {
     constructor(props) {
         super(props)
-        this.fetchAllPatches = this.fetchAllPatches.bind(this)
+        this.fetchFarmingPatches = this.fetchFarmingPatches.bind(this)
         this.state = {
-          farmingPatches: []
+          Patches: []
         }
     }
 
     componentDidMount() {
-        this.fetchAllPatches()
+        this.fetchFarmingPatches()
     }
 
-    fetchAllPatches(){
-        fetch('/api/items')
+    fetchFarmingPatches(){
+        fetch('/api/filter?filter[category_name_eq]=Farming')
         .then(response => response.json())
-        .then(response => this.setState({farmingPatches: response}))
-        // .then(response => console.log(response))
+        // .then(response => this.setState({Patches: response}))
+        .then(response => console.log(response))
     }
     render() {
-        var items = this.state.farmingPatches.map((data, i) => {
+        var items = this.state.Patches.map((data, i) => {
       return <Item data={data} key={i} />
         })
         return <div>
@@ -39,4 +40,4 @@ class Farming extends React.Component {
     }
 }
 
-export default Items
+export default Farming

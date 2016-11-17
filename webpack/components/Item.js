@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Modal from 'react-modal'
+// import Modal from 'react-modal'
 
 const customStyles = {
 content : {
@@ -16,30 +16,30 @@ transform             : 'translate(-50%, -50%)'
 class Item extends React.Component {
     constructor(props) {
         super(props)
-        this.openModal = this.openModal.bind(this)
-        this.afterOpenModal = this.afterOpenModal.bind(this)
-        this.closeModal = this.closeModal.bind(this)
-        this.state = {
-          modalIsOpen: false,
-        }
+        // this.openModal = this.openModal.bind(this)
+        // this.afterOpenModal = this.afterOpenModal.bind(this)
+        // this.closeModal = this.closeModal.bind(this)
+        // this.state = {
+        //   modalIsOpen: false,
+        // }
     }
-    openModal() {
-        this.setState({modalIsOpen: true});
-      }
-
-      afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        this.refs.subtitle.style.color = '#f00';
-      }
-
-      closeModal() {
-        this.setState({modalIsOpen: false});
-      }
+    // openModal() {
+    //     this.setState({modalIsOpen: true});
+    //   }
+    //
+    //   afterOpenModal() {
+    //     // references are now sync'd and can be accessed.
+    //     this.refs.subtitle.style.color = '#f00';
+    //   }
+    //
+    //   closeModal() {
+    //     this.setState({modalIsOpen: false});
+    //   }
 
 
     render() {
         return <div>
-        <div className="col-sm-4 text-center" onClick={this.openModal}>
+        <div className="col-sm-4 text-center">
           <div className="listing">
               <img src={this.props.data.image} alt='a nice photo here' className='patchPhoto img-responsive' />
               <h4 className="text-center">{this.props.data.product}</h4>
@@ -48,7 +48,7 @@ class Item extends React.Component {
         </div>
 
         {/* modal starts */}
-        <Modal
+        {/* <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
@@ -66,7 +66,7 @@ class Item extends React.Component {
             <button>inside</button>
             <button>the modal</button>
           </form>
-        </Modal>
+        </Modal> */}
       </div>
     }
 }

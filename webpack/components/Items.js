@@ -4,6 +4,8 @@ import Music from './Music'
 import Farming from './Farming'
 import NationalParks from './NationalParks'
 import Movies from './Movies'
+import Home from './Home'
+import { Link } from 'react-router'
 
 class Items extends React.Component {
     constructor(props) {
@@ -16,27 +18,6 @@ class Items extends React.Component {
 
     componentDidMount() {
         this.fetchAllPatches()
-    }
-
-    fetchFarmingPatches(){
-    fetch('/api/items')
-    .then(response => response.json())
-    .then(response => this.setState({Patches: response}))
-    }
-    fetchMusicPatches(){
-    fetch('/api/items')
-    .then(response => response.json())
-    .then(response => this.setState({Patches: response}))
-    }
-    fetchMoviesPatches(){
-    fetch('/api/items')
-    .then(response => response.json())
-    .then(response => this.setState({Patches: response}))
-    }
-    fetchNationalParksPatches(){
-    fetch('/api/items')
-    .then(response => response.json())
-    .then(response => this.setState({Patches: response}))
     }
 
     fetchAllPatches(){
@@ -53,11 +34,21 @@ class Items extends React.Component {
             <div className="container-fluid">
                 <div className="row">
                 <div className='tabLinks text-center'>
-                  <a href='#' className='link1'>Music</a>
-                  <a href='#' className='link2'>Movies</a>
-                  <a href='#' className='link3'>National Parks</a>
-                  <a href='#' className='link4'>Farming</a>
-                  <a href='#' className='link5'>Search Results</a>
+                  <Link to='/Music'>
+                  <button className='link1'>Music</button>
+                  </Link>
+                  <Link to='/Movies'>
+                  <button className='link2'>Movies</button>
+                  </Link>
+                  <Link to='/NationalParks'>
+                  <button className='link3'>National Parks</button>
+                  </Link>
+                  <Link to='/Farming'>
+                  <button className='link4'>Farming</button>
+                  </Link>
+                  <Link to='/Items'>
+                  <button className='link5'>All Patches</button>
+                  </Link>
                 </div>
                 </div>
                 </div>
