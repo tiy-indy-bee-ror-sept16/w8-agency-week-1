@@ -6,7 +6,7 @@ class Item < ApplicationRecord
   has_many :carts, through: :line_items
   belongs_to :category
   attachment :image
-  #
+
   # pg_search_scope :search_by_category, :associated_against => {
   #     :category => :name
   #   }, against: :name
