@@ -19,6 +19,8 @@ gem 'pg_search'
 gem 'ransack'
 gem 'webpack-rails'
 gem 'figaro'
+gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
+gem 'stripe'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
