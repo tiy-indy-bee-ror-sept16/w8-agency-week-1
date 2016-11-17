@@ -14,7 +14,7 @@ end
     charge = Stripe::Charge.create(
       customer: customer.id,
       amount: @amount,
-      description: 'Rails Stripe customer',
+      description: 'Iron Glory customer',
       currency: 'usd'
     )
 
