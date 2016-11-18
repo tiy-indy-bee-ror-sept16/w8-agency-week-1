@@ -36,9 +36,17 @@ class Item extends React.Component {
     //   closeModal() {
     //     this.setState({modalIsOpen: false});
     //   }
-
     addToCart() {
         console.log(this.props.data.id)
+        fetch('/addtocart', {
+        body: {
+            item_id: this.props.data.id,
+            quantity: 1,
+        },
+        method: 'POST',
+  })
+  .then(response => response.json())
+  .then(response => console.log(response))
     }
 
     render() {
