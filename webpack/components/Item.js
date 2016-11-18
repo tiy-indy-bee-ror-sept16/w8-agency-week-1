@@ -40,21 +40,23 @@ class Item extends React.Component {
     //   }
 
     addToCart() {
-      var cartId = this.props.data.id
-        console.log(this.props.data.id)
+      var quant = 1
+      var formData = new FormData()
+      formData.append('item_id', this.props.data.id)
+      formData.append('quantity', quant)
+      formData.append('token', sessionStorage.getItem('token'))
+        // console.log(this.props.data.id)
         fetch('/addtocart', {
-        body: {
-            item_id: cartId,
-            quantity: 1,
-            token: sessionStorage.getItem('token')
-        },
+        body: formData,
         method: 'POST',
-  })
+      })
+
   .then(response => response.json())
   // .then(response => console.log(response))
   .then(this.saveToken)
     }
     saveToken(response){
+      console.log(response)
       sessionStorage.setItem('token', JSON.stringify(response.cart.token))
     }
     render() {
