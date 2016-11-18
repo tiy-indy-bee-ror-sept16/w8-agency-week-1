@@ -6,8 +6,8 @@ import Farming from './Farming'
 import Home from './Home'
 import Items from './Items'
 import { Link } from 'react-router'
-import Navbar from './Navbar'
-
+import Footer from './Footer'
+import Header from './Header'
 
 class NationalParks extends React.Component {
     constructor(props) {
@@ -33,11 +33,30 @@ class NationalParks extends React.Component {
       return <Item data={data} key={i} />
         })
         return <div>
-                <div className="container">
-                    <div className="row">
-                        {NationalParksItems}
-                    </div>
+            <div className="row borderHeader">
+                <Header />
+            </div>
+            <div className="container-fluid">
+              <div className="row">
+                <ul className="list-unstyled nav_style not_home_nav">
+                    <Link to="/items"><li className="nav_style_li col-sm-3">All</li></Link>
+                    <Link to="/music"><li className="nav_style_li col-sm-3">Music</li></Link>
+                    <Link to="/movies"><li className="nav_style_li col-sm-3">Movies</li></Link>
+                    <Link to="/farming"><li className="nav_style_li col-sm-3">Farming</li></Link>
+                </ul>
+              </div>
+            </div>
+            <div className="container">
+                <div className="row">
+                    {NationalParksItems}
                 </div>
+            </div>
+            <hr/>
+            <div className="container-fluid">
+                <div className="row">
+                    <Footer />
+                </div>
+            </div>
         </div>
     }
 }
