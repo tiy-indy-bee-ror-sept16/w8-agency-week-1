@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/movies' => 'items#static'
   get '/bands' => 'items#static'
 
+  patch '/updatecart' => 'carts#update'
   post '/addtocart' => 'line_items#create'
 
   scope '/api' do
