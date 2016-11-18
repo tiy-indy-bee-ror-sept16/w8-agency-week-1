@@ -141,6 +141,29 @@ a:hover {
   padding-right: 50px;
 }
 
+/* checkout page */
+.checkoutContainer {
+    margin-top: 75px;
+}
+.checkoutFooter {
+  position: fixed;
+  bottom: 0;
+}
+
+.panel-group, .panel {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.panel > .panel-heading {
+  color: #424242;
+  text-transform: uppercase;
+}
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #FF008F;
+}
+
 
 
 

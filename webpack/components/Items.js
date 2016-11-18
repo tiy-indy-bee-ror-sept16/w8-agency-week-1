@@ -34,7 +34,7 @@ class Items extends React.Component {
     }
     render() {
         var items = this.state.Patches.map((data, i) => {
-      return <Item data={data} key={i} />
+            return <Item data={data} key={i} />
         })
         return <div>
             <div className="row borderHeader">

@@ -10,9 +10,9 @@ class LineItemsController < ApplicationController
       )
     else
       @line_item = LineItem.new(
-      item_id:  params[:item_id],
-      quantity: params[:quantity],
-      cart: Cart.new
+          item_id:  params[:item_id],
+          quantity: params[:quantity],
+          cart: Cart.new
       )
     end
 

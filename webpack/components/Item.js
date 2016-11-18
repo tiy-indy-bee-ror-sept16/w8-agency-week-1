@@ -20,11 +20,12 @@ class Item extends React.Component {
         // this.openModal = this.openModal.bind(this)
         // this.afterOpenModal = this.afterOpenModal.bind(this)
         // this.closeModal = this.closeModal.bind(this)
-        // this.state = {
-        //   modalIsOpen: false,
-        // }
+        this.state = {
+          addToCartBtn: 'Add To Cart',
+        }
         this.addToCart = this.addToCart.bind(this)
         this.saveToken = this.saveToken.bind(this)
+        this.switchAddToCartLabel = this.switchAddToCartLabel.bind(this)
     }
     // openModal() {
     //     this.setState({modalIsOpen: true});
@@ -40,25 +41,44 @@ class Item extends React.Component {
     //   }
 
     addToCart() {
-      var quant = 1
-      var formData = new FormData()
-      formData.append('item_id', this.props.data.id)
-      formData.append('quantity', quant)
-      formData.append('token', sessionStorage.getItem('token'))
+        var token = sessionStorage.getItem('token')
+        var formData = new FormData()
+        formData.append('item_id', this.props.data.id)
+        formData.append('quantity', 1)
+
+        if (token) {
+          formData.append('token', token)
+        }
+
         // console.log(this.props.data.id)
-        fetch('/addtocart', {
+      fetch('/addtocart', {
         body: formData,
         method: 'POST',
       })
-
-  .then(response => response.json())
-  // .then(response => console.log(response))
-  .then(this.saveToken)
+      .then(response => response.json())
+      // .then(response => console.log(response))
+      .then(this.saveToken)
+      .then(this.switchAddToCartLabel)
+        this.switchAddToCartLabel()
     }
+
     saveToken(response){
       console.log(response)
-      sessionStorage.setItem('token', JSON.stringify(response.cart.token))
+      sessionStorage.setItem('token', response.cart.token)
     }
+
+    switchAddToCartLabel() {
+        this.setState({
+            addToCartBtn: 'Added!'
+        })
+
+        setTimeout(() => {
+            this.setState({
+                addToCartBtn: 'Add To Cart'
+            })
+        }, 1000)
+    }
+
     render() {
         var price = '$' + (this.props.data.price)/100 + '.00'
         return <div>
@@ -66,7 +86,7 @@ class Item extends React.Component {
             <img src={this.props.data.image} alt='a nice photo here' className='patchPhoto img-responsive' />
                   <div className="col-sm-6 item_info">{this.props.data.product}</div>
                   <div className="col-sm-6 headerText item_info text-right">{price}</div><br /><br />
-              <button type="button" onClick={this.addToCart} className="btn cart_btn btn-block">Add to Cart</button><br/>
+              <button type="button" onClick={this.addToCart} className="btn cart_btn btn-block">{this.state.addToCartBtn}</button><br/>
           </div>
         </div>
 

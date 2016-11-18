@@ -11,9 +11,9 @@ class Footer extends React.Component {
             <div className="col-sm-10">
                 <a href="https://facebook.com"><span><i className="social_icon fa fa-facebook fa-2x" aria-hidden="true"></i></span></a>
                 <a href="https://twitter.com"><span><i className="social_icon fa fa-twitter fa-2x" aria-hidden="true"></i></span></a>
-                <h5 className="headerText"><strong><p><a className="footer_links" href="#">Terms</a></p></strong></h5>
-                <h5 className="headerText"><strong><p><a className="footer_links" href="#">Privacy</a></p></strong></h5>
-                <h5 className="headerText"><strong><p><a className="footer_links" href="#">Employee Login</a></p></strong></h5>
+                <a className="footer_links" href="#"><h5 className="headerText"><strong>Terms</strong></h5></a>
+                <a className="footer_links" href="#"><h5 className="headerText"><strong>Privacy</strong></h5></a>
+                <a href="/admin" className="footer_links"><h5 className="headerText"><strong>Admin Login</strong></h5></a>
                 <ul className="list-unstyled list-inline">
                     <li><Link className="footer_links headerText" to="/music">Music</Link></li>
                     <li><Link className="footer_links headerText" to="/movies">Movies</Link></li>
@@ -23,7 +23,7 @@ class Footer extends React.Component {
                 </ul>
             </div>
             <div className="col-sm-2">
-              <Link to='/'><img className="footer_logo" src='/img/iron-glory-logo.png' alt="" /></Link>
+              <Link to='/admin'><img className="footer_logo" src='/img/iron-glory-logo.png' alt="" /></Link>
             </div>
         </div>
     }
