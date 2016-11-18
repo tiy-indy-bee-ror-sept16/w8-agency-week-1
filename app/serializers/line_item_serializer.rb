@@ -1,5 +1,5 @@
 class LineItemSerializer < ActiveModel::Serializer
-  attributes :cart_id, :created_at, :item_id, :quantity
+  attributes :id, :cart_id, :created_at, :item_id, :quantity
 
 
 
