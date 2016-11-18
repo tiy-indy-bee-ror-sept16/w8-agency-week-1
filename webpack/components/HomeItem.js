@@ -44,6 +44,7 @@ class HomeItem extends React.Component {
               <img src={this.props.data.image} alt='a nice photo here' className='patchPhoto img-responsive' />
               <h4 className="text-center">{this.props.data.product}</h4>
               <h4 className="text-center textColor">{price}</h4>
+              <button type="button" onClick={this.addToCart} className="btn btn-primary btn-sm center-block">Add to Cart</button>
           </div>
         </div>
 
