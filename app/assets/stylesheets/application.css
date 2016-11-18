@@ -35,7 +35,7 @@
 
 .borderHeader {
   position: fixed;
-  /*background-color: white;*/
+  background-color: white;
   /*border-bottom: 1px solid rgb(226, 226, 226);*/
   z-index: 1;
   height: 75px;

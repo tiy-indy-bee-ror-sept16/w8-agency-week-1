@@ -39,11 +39,10 @@ class NationalParks extends React.Component {
             <div className="container-fluid">
               <div className="row">
                 <ul className="list-unstyled nav_style not_home_nav">
-                  <Link to="/music"><li className="nav_style_li col-sm-3">Music</li></Link>
-                  <Link to="/movies"><li className="nav_style_li col-sm-3">Movies</li></Link>
-                  <Link to="/farming"><li className="nav_style_li col-sm-3">Farming</li></Link>
-                  <Link to="/items"><li className="nav_style_li col-sm-3">All</li></Link>
-                  {/* <li className="nav_style_li"><span className="">See All</span></li> */}
+                    <Link to="/items"><li className="nav_style_li col-sm-3">All</li></Link>
+                    <Link to="/music"><li className="nav_style_li col-sm-3">Music</li></Link>
+                    <Link to="/movies"><li className="nav_style_li col-sm-3">Movies</li></Link>
+                    <Link to="/farming"><li className="nav_style_li col-sm-3">Farming</li></Link>
                 </ul>
               </div>
             </div>
