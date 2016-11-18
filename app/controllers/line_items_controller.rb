@@ -4,10 +4,9 @@ class LineItemsController < ApplicationController
   def create
     if params[:token]
       @line_item = LineItem.new(
-          item_id:  params[:item_id],
-          token: params[:token],
-          quantity: params[:quantity],
-          cart: Cart.where(token: params[:token]).first
+      item_id:  params[:item_id],
+      quantity: params[:quantity],
+      cart: Cart.where(token: params[:token]).first
       )
     else
       @line_item = LineItem.new(
@@ -18,7 +17,7 @@ class LineItemsController < ApplicationController
     end
 
     if @line_item.save
-      render json: @line_item.cart
+      render json: @line_item.cart, include: ["line_items.item"]
     else
       render json: @line_item.errors.full_message, status: :unprocessable_entity
     end
