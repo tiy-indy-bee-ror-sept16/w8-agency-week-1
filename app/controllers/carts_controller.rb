@@ -11,10 +11,23 @@ class CartsController < ApplicationController
   end
 
 
+  def update
+    @cart = Cart.find_by(token: params[:token])
+    @cart.update!(cart_params)
+      if @cart.save
+        render json: @cart
+      else
+        render json: @cart.errors
+      end
+  end
 
 
 
+private
 
+def cart_params
+  params.permit(:shipping_address, :token)
+end
 
 
 
