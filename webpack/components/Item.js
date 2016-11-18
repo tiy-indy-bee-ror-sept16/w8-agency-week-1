@@ -42,6 +42,7 @@ class Item extends React.Component {
         body: {
             item_id: this.props.data.id,
             quantity: 1,
+            token: sessionStorage.getItem('token')
         },
         method: 'POST',
   })
