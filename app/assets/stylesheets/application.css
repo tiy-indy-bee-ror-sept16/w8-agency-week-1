@@ -42,7 +42,7 @@
 
 .tabLinks{
  height: 5vh;
- background-color: #424242 ;
+ background-color: #424242;
  margin-top: 50px;
  margin-bottom: 20px;
  display: flex;
@@ -131,6 +131,19 @@
 }
 a:hover {
   text-decoration: none;
+}
+
+.cart_btn {
+    border-radius: 0;
+    border: 1px solid rgb(226, 226, 226);
+    background-color: white;
+    color: #424242;
+    text-transform: uppercase;
+    height: 40px;
+}
+.cart_btn:hover {
+    background-color: #FF008F;
+    color: white;
 }
 
 
