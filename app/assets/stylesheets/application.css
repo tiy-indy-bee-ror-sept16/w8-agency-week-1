@@ -111,3 +111,37 @@
     //     color: black
     // }*/
 }
+
+.nav_style {
+    width: 100%;
+}
+.nav_style_li {
+    border: 1px solid rgb(226, 226, 226);
+    display: inline-block;
+    height: 75px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #424242;
+}
+.nav_style_li:hover {
+  background-color: #FF008F;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+/*media queries*/
+@media all and (max-width: 768px) {
+    .nav_style_li {
+        display: block;
+    }
+}
