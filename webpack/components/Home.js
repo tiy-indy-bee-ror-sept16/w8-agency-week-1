@@ -27,32 +27,45 @@ class Home extends React.Component {
             <div className="row borderHeader">
                 <Header />
             </div>
-            <div className="row header containerMargin">
-                <div className="col-sm-12 center-block headerBackgroundLogo">
-                </div>
+            <div className="row header">
+                <div className="col-sm-2"></div>
+                    <div className="col-sm-8">
+                        <img className="img-responsive containerMargin" src="img/iron-glory-logo-inverted.png" />
+                    </div>
+                <div className="col-sm-2"></div>
+            </div>
+            <div className="row">
+              <ul className="list-unstyled nav_style">
+                <Link to="/music"><li className="nav_style_li col-sm-3">Music</li></Link>
+                <Link to="/movies"><li className="nav_style_li col-sm-3">Movies</li></Link>
+                <Link to="/farming"><li className="nav_style_li col-sm-3">Farming</li></Link>
+                <Link to="/nationalparks"><li className="nav_style_li col-sm-3">National Parks</li></Link>
+                {/* <li className="nav_style_li"><span className="">See All</span></li> */}
+              </ul>
             </div>
         </div>
-        <div className="container-fluid containerMargin">
-            <div className="row borderBottom">
-                <Feature /> <button onClick={this.openModal}>hi</button>
-                <Link to='/items'>
+        <div className="container-fluid">
+            <div className="row homeContainers">
+                <Feature />
+                {/* <button onClick={this.openModal}>hi</button> */}
+                {/* <Link to='/items'>
                 <button type='button' className='btn btn-default'>Show All</button>
-                </Link>
+                </Link> */}
             </div>
-            <div className="row borderBottom">
+            <div className="row homeContainers">
                 <MusicHome />
             </div>
-            <div className="row borderBottom">
+            <div className="row homeContainers">
                 <FarmingHome />
             </div>
-            <div className="row borderBottom">
+            <div className="row homeContainers">
                 <MovieHome />
             </div>
-            <div className="row borderBottom">
+            <div className="row homeContainers">
                 <NationalParksHome />
             </div>
         </div>
-        <div className="container-fluid containerMargin">
+        <div className="container-fluid">
             <div className="row">
             <Footer />
             </div>

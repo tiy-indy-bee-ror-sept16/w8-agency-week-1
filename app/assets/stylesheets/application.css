@@ -22,71 +22,25 @@
    width: 100%;
  }
 
-
  .header {
-   height: 34vw;
+   height: 500px;
    background-image: url('/img/iron-glory-background.jpg');
    background-size: cover;
    background-position: center;
  }
 
- .headerBackgroundLogo {
-  margin-top: 170px;
-}
+ .search_style {
+   padding-top: 8px;
+ }
 
 .borderHeader {
   position: fixed;
-  background-color: black;
+  /*background-color: white;*/
+  /*border-bottom: 1px solid rgb(226, 226, 226);*/
   z-index: 1;
+  height: 75px;
+  padding: 12px;
 }
-
-.tabLinks{
- height: 5vh;
- background-color: #424242;
- margin-top: 50px;
- margin-bottom: 20px;
- display: flex;
- font-size: 20px;
- box-shadow: 2px 2px lightgrey;
- border-bottom: 2px solid #424242 ;
-}
-.link1{
- flex: 1;
- color: #ff0089 ;
- transition: .4s ease;
- border-bottom: 2px solid #424242 ;
-}
-.link2{
- flex: 1;
- color: #ff0089 ;
- transition: .4s ease;
- border-bottom: 2px solid #424242 ;
-}
-.link3{
- flex: 1;
- color: #ff0089 ;
- transition: .4s ease;
- border-bottom: 2px solid #424242 ;
-}
-.link4{
- flex: 1;
- color: #ff0089 ;
- transition: .4s ease;
- border-bottom: 2px solid #424242 ;
-}
-.link5{
- flex: 1;
- color: #ff0089 ;
- transition: .4s ease;
- border-bottom: 2px solid #424242 ;
-}
-.link1:hover, .link2:hover, .link3:hover, .link4:hover, .link5:hover{
- background-color: #dedede ;
- color: #ff0089 ;
- border-bottom: hidden;
-
-}
-
 
 .starLogo {
   width: 65px;
@@ -94,29 +48,16 @@
 }
 
 .containerMargin {
-  margin-top: 50px;
-}
-
-.borderBottom {
-  border-bottom: 1px solid red;
-}
-
-.textColor {
-  color: #FF008F;
-}
-
-.footerEtsyLinks {
-    margin-top: 15px;
-    /*// a {
-    //     color: black
-    // }*/
+  margin-top: 200px;
 }
 
 .nav_style {
     width: 100%;
 }
 .nav_style_li {
-    border: 1px solid rgb(226, 226, 226);
+    border-left: 1px solid rgb(226, 226, 226);
+    border-right: 1px solid rgb(226, 226, 226);
+    border-bottom: 1px solid rgb(226, 226, 226);
     display: inline-block;
     height: 75px;
     text-align: center;
@@ -128,11 +69,17 @@
 .nav_style_li:hover {
   background-color: #FF008F;
   color: white;
+  border-left: 1px solid #FF008F;
+  border-right: 1px solid #FF008F;
+  border-bottom: 1px solid #FF008F;
 }
 a:hover {
   text-decoration: none;
 }
-
+.not_home_nav {
+  margin-top: 75px;
+  border-top: 1px solid rgb(226, 226, 226);
+}
 .cart_btn {
     border-radius: 0;
     border: 1px solid rgb(226, 226, 226);
@@ -146,6 +93,53 @@ a:hover {
     color: white;
 }
 
+.search_btn {
+  background-color: white;
+  color: #424242;
+}
+.search_btn:hover {
+  background-color: #FF008F;
+  color: white;
+}
+
+.homeContainers {
+  border-bottom: 1px solid rgb(226, 226, 226);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.headerText {
+  color: #FF008F;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.item_info {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0;
+}
+
+.social_icon {
+  color: #424242;
+  margin: 10px;
+}
+.social_icon:hover {
+  color: #FF008F;
+}
+
+.footer_links {
+  color: #424242;
+  margin: 10px;
+  cursor: pointer;
+}
+.footer_links:hover {
+  color: #FF008F;
+}
+.footer_logo {
+  margin-top: 70px;
+  padding-right: 50px;
+}
 
 
 
@@ -156,5 +150,25 @@ a:hover {
 @media all and (max-width: 768px) {
     .nav_style_li {
         display: block;
+    }
+    .borderHeader {
+      height: 150px;
+    }
+    .starLogo {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .search_style {
+      margin-right: 10px;
+    }
+    .headerText {
+      margin-top: 5px;
+    }
+    .item_info {
+      text-align: left;
+    }
+    .footer_logo {
+      display: none;
     }
 }

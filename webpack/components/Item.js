@@ -62,12 +62,11 @@ class Item extends React.Component {
     render() {
         var price = '$' + (this.props.data.price)/100 + '.00'
         return <div>
-        <div className="col-sm-4 text-center">
-          <div className="listing">
-              <img src={this.props.data.image} alt='a nice photo here' className='patchPhoto img-responsive' />
-              <h4 className="text-center">{this.props.data.product}</h4>
-              <h4 className="text-center textColor"> {price}</h4>
-              <button type="button" onClick={this.addToCart} className="btn btn-primary btn-sm center-block">Add to Cart</button>
+          <div className="col-sm-3">
+            <img src={this.props.data.image} alt='a nice photo here' className='patchPhoto img-responsive' />
+                  <div className="col-sm-6 item_info">{this.props.data.product}</div>
+                  <div className="col-sm-6 headerText item_info text-right">{price}</div><br /><br />
+              <button type="button" onClick={this.addToCart} className="btn cart_btn btn-block">Add to Cart</button><br/>
           </div>
         </div>
 
@@ -91,7 +90,6 @@ class Item extends React.Component {
             <button>the modal</button>
           </form>
         </Modal> */}
-      </div>
     }
 }
 

@@ -8,19 +8,17 @@ class Header extends React.Component {
     }
     render() {
         return <div>
-            <div className="col-sm-5">
-                <img className="starLogo" src="/img/iron-glory-logo-star.png" alt="Iron Glory logo" />
+            <div className="col-sm-6">
+                <Link to='/'><img className="starLogo" src="/img/iron-glory-logo-star.png" alt="Iron Glory logo" /></Link>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-6 search_style">
                 <div className="input-group">
                     <input className="form-control" type="text" name="search" placeholder="Search patches..." value="" />
-                <div className="input-group-btn">
-                    <button className="btn btn-default" type="button"><span className="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    <div className="input-group-btn">
+                        <button className="btn btn-default search_btn" type="button"><span className="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        <button type="button" className="btn btn-default search_btn"><span><i className="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></span></button>
+                    </div>
                 </div>
-                </div>
-            </div>
-            <div className="col-sm-2 pull-right">
-                <button type="button" className="btn btn-default btn-sm center-block"><span><i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> Cart</span></button>
             </div>
         </div>
     }
