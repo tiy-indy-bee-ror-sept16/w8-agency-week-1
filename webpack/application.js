@@ -11,6 +11,7 @@ import Movies from './components/Movies'
 import SearchResults from './components/SearchResults'
 import Checkout from './components/Checkout'
 import Login from './components/Login'
+import Item from './components/Item'
 
 // import { sharedState, attachSharedState, detachSharedState } from 'react-helpers/dist/sharedState'
 

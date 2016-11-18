@@ -7,16 +7,20 @@ import Movies from './Movies'
 import Home from './Home'
 import { Link } from 'react-router'
 import Navbar from './Navbar'
+import Modal from 'react-modal'
+import Footer from './Footer'
+import Header from './Header'
+
 
 class Items extends React.Component {
     constructor(props) {
         super(props)
         this.fetchAllPatches = this.fetchAllPatches.bind(this)
-        // this.fetchFarmingPatches = this.fetchFarmingPatches.bind(this)
         this.state = {
-          Patches: []
+          Patches: [],
         }
     }
+
 
     componentDidMount() {
         this.fetchAllPatches()
@@ -33,12 +37,31 @@ class Items extends React.Component {
       return <Item data={data} key={i} />
         })
         return <div>
-                <Navbar/>
-                <div className="container">
-                    <div className="row">
-                        {items}
-                    </div>
+            <div className="row borderHeader">
+                <Header />
+            </div>
+            <div className="container-fluid">
+              <div className="row">
+                <ul className="list-unstyled nav_style not_home_nav">
+                  <Link to="/music"><li className="nav_style_li col-sm-3">Music</li></Link>
+                  <Link to="/movies"><li className="nav_style_li col-sm-3">Movies</li></Link>
+                  <Link to="/farming"><li className="nav_style_li col-sm-3">Farming</li></Link>
+                  <Link to="/nationalparks"><li className="nav_style_li col-sm-3">National Parks</li></Link>
+                  {/* <li className="nav_style_li"><span className="">See All</span></li> */}
+                </ul>
+              </div>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div onClick={this.openModal}>{items}</div>
                 </div>
+            </div>
+            <hr/>
+            <div className="container-fluid">
+                <div className="row">
+                    <Footer />
+                </div>
+            </div>
         </div>
     }
 }

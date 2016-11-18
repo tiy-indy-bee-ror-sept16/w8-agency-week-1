@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "license": "ISC",
   "dependencies": {
+    "react-bootstrap": "^0.30.6",
     "react-modal": "^1.5.2",
     "stats-webpack-plugin": "^0.2.1",
     "webpack": "^1.9.11",

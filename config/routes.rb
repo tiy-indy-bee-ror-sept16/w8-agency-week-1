@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post '/addtocart' => 'line_items#create'
 
 
+  patch '/updatecart' => 'carts#update'
+  post '/addtocart' => 'line_items#create'
+
   scope '/api' do
     get '/filter' => 'category#filter'
     resources :items

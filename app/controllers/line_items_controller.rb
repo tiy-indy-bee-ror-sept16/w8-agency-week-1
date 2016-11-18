@@ -7,7 +7,8 @@ class LineItemsController < ApplicationController
       item_id:  params[:item_id],
       token: params[:token],
       quantity: params[:quantity],
-      cart_id: Cart.where[token: params[:token]].first
+      cart: Cart.where[token: params[:token]].first
+
       )
     else
       @line_item = LineItem.new(
@@ -21,7 +22,12 @@ class LineItemsController < ApplicationController
     else
       render json: @line_item.errors.full_message, status: :unprocessable_entity
     end
+<<<<<<< HEAD
     end
+=======
+  end
+
+>>>>>>> 0370bc0338f1a1f642a21a5da8a9879b6baa2202
   def update
     @line_item = LineItem.find(params :id)
     @line_item.quantity = params :quantity
