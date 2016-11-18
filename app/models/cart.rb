@@ -11,7 +11,7 @@ class Cart < ApplicationRecord
 
 
   def taxes
-    subtotal * 0.6
+    subtotal * 0.06
   end
 
 
