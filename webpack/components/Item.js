@@ -13,6 +13,7 @@ import Modal from 'react-modal'
 // }
 // };
 
+
 class Item extends React.Component {
     constructor(props) {
         super(props)
@@ -23,6 +24,7 @@ class Item extends React.Component {
         //   modalIsOpen: false,
         // }
         this.addToCart = this.addToCart.bind(this)
+        this.saveToken = this.saveToken.bind(this)
     }
     // openModal() {
     //     this.setState({modalIsOpen: true});
@@ -36,20 +38,27 @@ class Item extends React.Component {
     //   closeModal() {
     //     this.setState({modalIsOpen: false});
     //   }
-    addToCart() {
-        console.log(this.props.data.id)
-        fetch('/addtocart', {
-        body: {
-            item_id: this.props.data.id,
-            quantity: 1,
-            token: sessionStorage.getItem('token')
-        },
-        method: 'POST',
-  })
-  .then(response => response.json())
-  .then(response => console.log(response))
-    }
 
+    addToCart() {
+      var quant = 1
+      var formData = new FormData()
+      formData.append('item_id', this.props.data.id)
+      formData.append('quantity', quant)
+      formData.append('token', sessionStorage.getItem('token'))
+        // console.log(this.props.data.id)
+        fetch('/addtocart', {
+        body: formData,
+        method: 'POST',
+      })
+
+  .then(response => response.json())
+  // .then(response => console.log(response))
+  .then(this.saveToken)
+    }
+    saveToken(response){
+      console.log(response)
+      sessionStorage.setItem('token', JSON.stringify(response.cart.token))
+    }
     render() {
         var price = '$' + (this.props.data.price)/100 + '.00'
         return <div>
