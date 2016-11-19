@@ -23,7 +23,7 @@ class Footer extends React.Component {
                 </ul>
             </div>
             <div className="col-sm-2">
-              <Link to='/admin'><img className="footer_logo" src='/img/iron-glory-logo.png' alt="" /></Link>
+              <Link to='/'><img className="footer_logo" src='/img/iron-glory-logo.png' alt="" /></Link>
             </div>
         </div>
     }

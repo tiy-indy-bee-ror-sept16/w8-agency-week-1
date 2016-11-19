@@ -143,11 +143,7 @@ a:hover {
 
 /* checkout page */
 .checkoutContainer {
-    margin-top: 75px;
-}
-.checkoutFooter {
-  position: fixed;
-  bottom: 0;
+    margin-top: 100px;
 }
 
 .panel-group, .panel {
@@ -163,6 +159,14 @@ a:hover {
   cursor: pointer;
   color: #FF008F;
 }
+
+.cart_item_container {
+    /*border-bottom: 1px solid rgb(226, 226, 226);
+    margin: 20px;*/
+}
+/*.cart_item_text {
+  padding-top: 30px;
+}*/
 
 
 

@@ -45,10 +45,12 @@ class Item extends React.Component {
         var formData = new FormData()
         formData.append('item_id', this.props.data.id)
         formData.append('quantity', 1)
+        formData.append('token', token)
 
-        if (token) {
-          formData.append('token', token)
-        }
+
+        // if (token) {
+        //   formData.append('token', token)
+        // }
 
         // console.log(this.props.data.id)
       fetch('/addtocart', {
@@ -64,7 +66,7 @@ class Item extends React.Component {
 
     saveToken(response){
       console.log(response)
-      sessionStorage.setItem('token', response.cart.token)
+      sessionStorage.setItem('token', response.token)
     }
 
     switchAddToCartLabel() {
