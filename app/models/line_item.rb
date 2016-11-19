@@ -7,4 +7,5 @@ class LineItem < ApplicationRecord
  end
 
 
+
 end
