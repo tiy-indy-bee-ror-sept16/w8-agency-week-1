@@ -1,5 +1,6 @@
 class CartSerializer < ActiveModel::Serializer
-  attributes :id, :token, :shipping_address, :created_at, :subtotal, :taxes, :shipping, :total
+  attributes :id, :token, :created_at, :subtotal, :taxes,
+            :street, :city, :state, :zipcode, :country, :total
 
   has_many :line_items
 
