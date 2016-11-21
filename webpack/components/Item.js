@@ -2,24 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Modal from 'react-modal'
 
-// const customStyles = {
-// content : {
-// top                   : '50%',
-// left                  : '50%',
-// right                 : 'auto',
-// bottom                : 'auto',
-// marginRight           : '-50%',
-// transform             : 'translate(-50%, -50%)'
-// }
-// };
-
-
 class Item extends React.Component {
     constructor(props) {
         super(props)
-        // this.openModal = this.openModal.bind(this)
-        // this.afterOpenModal = this.afterOpenModal.bind(this)
-        // this.closeModal = this.closeModal.bind(this)
         this.state = {
           addToCartBtn: 'Add To Cart',
         }
@@ -27,18 +12,6 @@ class Item extends React.Component {
         this.saveToken = this.saveToken.bind(this)
         this.switchAddToCartLabel = this.switchAddToCartLabel.bind(this)
     }
-    // openModal() {
-    //     this.setState({modalIsOpen: true});
-    //   }
-    //
-    //   afterOpenModal() {
-    //     // references are now sync'd and can be accessed.
-    //     this.refs.subtitle.style.color = '#f00';
-    //   }
-    //
-    //   closeModal() {
-    //     this.setState({modalIsOpen: false});
-    //   }
 
     addToCart() {
         var token = sessionStorage.getItem('token')
@@ -47,12 +20,6 @@ class Item extends React.Component {
         formData.append('quantity', 1)
         formData.append('token', token)
 
-
-        // if (token) {
-        //   formData.append('token', token)
-        // }
-
-        // console.log(this.props.data.id)
       fetch('/addtocart', {
         body: formData,
         method: 'POST',
@@ -65,7 +32,7 @@ class Item extends React.Component {
     }
 
     saveToken(response){
-      console.log(response)
+    //   console.log(response)
       sessionStorage.setItem('token', response.token)
     }
 

@@ -13,7 +13,7 @@ class MusicHome extends React.Component {
       }
   componentDidMount() {
     this.addMusicHome()
-        }
+    }
   addMusicHome() {
         fetch('/api/filter?filter[category_name_eq]=Music')
         .then(response => response.json())

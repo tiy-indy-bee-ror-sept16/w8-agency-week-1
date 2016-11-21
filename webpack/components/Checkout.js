@@ -23,18 +23,7 @@ class Checkout extends React.Component {
         // .then(response => console.log(response))
         .then(response => this.setState({cartItems: response}))
     }
-    // deleteCartItems() {
-    //     var formData = new FormData()
-    //     formData.append('line_items', this.item.)
-    //
-    //     fetch('/api/carts/id?token=' + sessionStorage.getItem('token')), {
-    //       body: formData,
-    //       method: 'DELETE',
-    //     }
-    //     .then(response => response.json())
-    //     // .then(response => console.log(response))
-    //     .then(response => this.setState({cartItems: response}))
-    // }
+
     render() {
         var cart = this.state.cartItems.line_items.map((data, i) => {
             var price = '$' + (data.item.price)/100 + '.00'
