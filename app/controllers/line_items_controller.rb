@@ -15,16 +15,14 @@ class LineItemsController < ApplicationController
           cart: Cart.new
       )
     end
-    if @line_item.item.available > @line_item.quantity
-      render json: @line_item.errors.full_message, status: :unprocessable_entity
+    if @line_item.item.available < @line_item.quantity
+      render json: ["We do not have that many in stock"], status: :unprocessable_entity
     else
-    if @line_item.save
-      @line_item.item.available -= @line_item.quantity
-      @line_item.item.save!
-      render json: @line_item.cart, include: ["line_items.item"]
-    else
-      render json: @line_item.errors.full_message, status: :unprocessable_entity
-    end
+      if @line_item.save
+        render json: @line_item.cart, include: ["line_items.item"]
+      else
+        render json: @line_item.errors.full_message, status: :unprocessable_entity
+      end
     end
   end
 
@@ -33,13 +31,9 @@ class LineItemsController < ApplicationController
     @line_item.quantity = params[:quantity]
 
     if @line_item.save
-      if @line_item.quantity_change?
-        @line_item.item.quantity += (@line_item.quantity_change[0] - @line_item.quantity_change[1])
-        @line_item.item.save!
-      end
-        render json: @line_item.cart, include: ["line_items.item"]
+      render json: @line_item.cart, include: ["line_items.item"]
     else
-        render json: @line_item.errors.full_message, status: :unprocessable_entity
+      render json: @line_item.errors.full_message, status: :unprocessable_entity
     end
   end
 

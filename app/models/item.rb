@@ -7,10 +7,16 @@ class Item < ApplicationRecord
   belongs_to :category
   attachment :image
 
+  validates :price, presence: true
+
+
   # pg_search_scope :search_by_category, :associated_against => {
   #     :category => :name
   #   }, against: :name
 
+  def update_available(ordered)
+    update(available: available - ordered)
+  end
 
 
 
